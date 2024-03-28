@@ -1,0 +1,103 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+\usepackage{marvosym}
+\usepackage{xcolor}
+
+\usepackage{tikz}
+\usepackage{calc}
+
+\definecolor{darkblue}{HTML}{2A7977}
+\definecolor{lightblue}{HTML}{3AAFA9}
+\definecolor{darkgrey}{HTML}{17252A}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=magenta,
+    urlcolor=darkblue,
+    }
+\urlstyle{same}
+\usepackage{graphicx}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\textit{Page \thepage\ of \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt} % Remove the header line
+
+\def\bitcoin{%
+  \leavevmode
+  \vtop{\offinterlineskip %\bfseries
+    \setbox0=\hbox{B}%
+    \setbox2=\hbox to\wd0{\hfil\hskip-.03em
+    \vrule height .3ex width .15ex\hskip .08em
+    \vrule height .3ex width .15ex\hfil}
+    \vbox{\copy2\box0}\box2}}
+
+\begin{document}
+
+    % HEADER
+    \begin{center}
+        \includegraphics[width=4cm]{images/logo.png}\\
+        \vspace{0.25cm}
+        \textbf{Contact:}\\
+        \href{mailto:hello@ajrlewis.com}{\Letter~hello@ajrlewis.com}\quad
+        \href{https://www.ajrlewis.com}{\Mundus~https://ajrlewis.com} \\
+        \vspace{0.75cm}
+        \large
+        \textbf{Receipt For:}\\
+        Tech Solutions Consultancy \& Services\\
+        % SERVICES
+        \vspace{0.5cm}
+        \textbf{Client:}\\
+        Hyper Humans (\href{https://hyperhumans.ai}{hyperhumans.ai})\\
+        % CLIENT
+        \vspace{0.5cm}
+        \textbf{Reference:}\\
+        \#AJRLEWIS-GLRH3AZC-1\\
+        % REFERENCE
+        \vspace{0.5cm}
+        \textbf{Date Issued:}\\
+        % DATE
+        \today\\
+        \vspace{0.25cm}
+    \end{center}
+
+    \noindent
+    \begin{tikzpicture}
+        \fill[darkblue] (0,0) rectangle (\textwidth/3, 0.2);
+        \fill[lightblue] (\textwidth/3,0) rectangle (2*\textwidth/3, 0.2);
+        \fill[darkgrey] (2*\textwidth/3,0) rectangle (\textwidth, 0.2);
+    \end{tikzpicture}
+    \vspace{0.25cm}
+
+    % BODY
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            \textbf{Description} & \textbf{Amount} \\ \midrule
+            Lead Generation with Large Language Models & 0.02~000~000\\
+            \\ \midrule
+            \\
+            \textbf{Total} & \textit{\textbf{\bitcoin{}0.02~000~000}} \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{@{}ll@{}}
+            \toprule
+            \textbf{Date} & \textbf{Transaction ID} \\ \midrule
+            2024-03-05 18:35 & \href{https://mempool.space/tx/99bad92cac2a2a7e2aa05076a8b1bec84e2d18bfe79ac031f0d938fcf7c4ada6}{99bad92cac2a2a7e2aa05076a8b1bec84e2d18bfe79ac031f0d938fcf7c4ada6} \\
+            2024-03-26 13:54 & \href{https://mempool.space/tx/6a88d948c5794d351b00f447974df7551016043b47d2e93eb7b17d726a38353e}{6a88d948c5794d351b00f447974df7551016043b47d2e93eb7b17d726a38353e} \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+\end{document}
